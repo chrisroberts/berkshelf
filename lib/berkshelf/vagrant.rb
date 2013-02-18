@@ -1,3 +1,4 @@
+=begin
 require 'vagrant'
 require 'berkshelf'
 
@@ -71,3 +72,4 @@ module Berkshelf
 end
 
 Berkshelf::Vagrant.init!
+=end

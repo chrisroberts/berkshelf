@@ -1,4 +1,4 @@
-require 'vagrant/errors'
+#require 'vagrant/errors'
 
 module Berkshelf
   class BerkshelfError < StandardError
@@ -21,6 +21,7 @@ module Berkshelf
   #   rescue BerkshelfError => e
   #     VagrantWrapperError.new(e)
   #   end
+=begin
   class VagrantWrapperError < Vagrant::Errors::VagrantError
     # @param [BerkshelfError]
     attr_reader :original
@@ -40,6 +41,7 @@ module Berkshelf
         original.send(fun, *args, &block)
       end
   end
+=end
 
   class InternalError < BerkshelfError; status_code(99); end
   class ArgumentError < InternalError; end
